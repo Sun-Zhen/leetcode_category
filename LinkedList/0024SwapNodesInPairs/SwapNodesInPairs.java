@@ -1,5 +1,3 @@
-import utils.ListNode;
-
 /**
  * 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
  * 给定 1->2->3->4, 你应该返回 2->1->4->3.
@@ -10,7 +8,7 @@ import utils.ListNode;
  * @author Alden
  */
 public class SwapNodesInPairs {
-    public ListNode swapPairs(ListNode head) {
+    ListNode swapPairs(ListNode head) {
         ListNode res = new ListNode(0);
         res.next = head;
         ListNode current = res.next;
@@ -31,9 +29,9 @@ public class SwapNodesInPairs {
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4};
         ListNode l1 = ListNode.getNodes(a);
-        ListNode.dumpNodes(l1);
+        l1.dumpNodes();
         SwapNodesInPairs test = new SwapNodesInPairs();
         ListNode l2 = test.swapPairs(l1);
-        ListNode.dumpNodes(l2);
+        l2.dumpNodes();
     }
 }

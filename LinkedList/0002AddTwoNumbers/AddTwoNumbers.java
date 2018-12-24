@@ -1,5 +1,3 @@
-import utils.ListNode;
-
 /**
  * @author Alden
  */
@@ -55,10 +53,10 @@ public class AddTwoNumbers {
         int[] a2 = {7, 3};
         ListNode l1 = ListNode.getNodes(a1);
         ListNode l2 = ListNode.getNodes(a2);
-        ListNode.dumpNodes(l1);
-        ListNode.dumpNodes(l2);
+        l1.dumpNodes();
+        l2.dumpNodes();
         AddTwoNumbers test = new AddTwoNumbers();
         ListNode result = test.addTwoNumbers(l1, l2);
-        ListNode.dumpNodes(result);
+        result.dumpNodes();
     }
 }

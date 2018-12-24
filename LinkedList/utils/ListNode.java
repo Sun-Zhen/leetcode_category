@@ -2,14 +2,14 @@
  * @author Alden
  */
 public class ListNode {
-    public int val;
-    public ListNode next;
+    int val;
+    ListNode next;
 
     public ListNode(int x) {
         val = x;
     }
 
-    public static ListNode getNodes(int[] a) {
+    static ListNode getNodes(int[] a) {
         if (a != null && a.length > 0) {
             ListNode[] l1 = new ListNode[a.length];
             for (int i = 0; i < a.length; i++) {
@@ -24,11 +24,12 @@ public class ListNode {
         }
     }
 
-    public static void dumpNodes(ListNode l) {
+    void dumpNodes() {
         StringBuilder sb = new StringBuilder();
-        while (l != null) {
-            sb.append(l.val).append("\t");
-            l = l.next;
+        ListNode curr = this;
+        while (curr != null) {
+            sb.append(curr.val).append("\t");
+            curr = curr.next;
         }
         System.out.println(sb.toString());
     }

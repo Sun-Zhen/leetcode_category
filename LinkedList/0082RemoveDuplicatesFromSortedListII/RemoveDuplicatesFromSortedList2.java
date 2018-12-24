@@ -9,7 +9,7 @@
  * @author Alden
  */
 public class RemoveDuplicatesFromSortedList2 {
-    public ListNode deleteDuplicates(ListNode head) {
+    ListNode deleteDuplicates(ListNode head) {
         ListNode res = new ListNode(0);
         res.next = head;
         ListNode current = head;
@@ -44,9 +44,9 @@ public class RemoveDuplicatesFromSortedList2 {
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 3, 4, 4, 5};
         ListNode l1 = ListNode.getNodes(a);
-        ListNode.dumpNodes(l1);
+        l1.dumpNodes();
         RemoveDuplicatesFromSortedList2 test = new RemoveDuplicatesFromSortedList2();
         ListNode l2 = test.deleteDuplicates(l1);
-        ListNode.dumpNodes(l2);
+        l2.dumpNodes();
     }
 }

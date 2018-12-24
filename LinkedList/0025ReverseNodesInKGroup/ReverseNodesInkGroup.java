@@ -1,5 +1,3 @@
-import utils.ListNode;
-
 /**
  * 给定这个链表：1->2->3->4->5
  * 当 k = 2 时，应当返回: 2->1->4->3->5
@@ -10,7 +8,7 @@ import utils.ListNode;
  * @author Alden
  */
 public class ReverseNodesInkGroup {
-    public ListNode reverseKGroup(ListNode head, final int k) {
+    ListNode reverseKGroup(ListNode head, final int k) {
         ListNode[] la = new ListNode[k];
         ListNode res = new ListNode(0);
         res.next = head;
@@ -43,8 +41,8 @@ public class ReverseNodesInkGroup {
 //        int[] a = {2, 1};
         ListNode l1 = ListNode.getNodes(a);
         ReverseNodesInkGroup test = new ReverseNodesInkGroup();
-        ListNode.dumpNodes(l1);
+        l1.dumpNodes();
         ListNode l2 = test.reverseKGroup(l1, 2);
-        ListNode.dumpNodes(l2);
+        l2.dumpNodes();
     }
 }

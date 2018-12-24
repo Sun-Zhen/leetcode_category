@@ -1,5 +1,3 @@
-import utils.ListNode;
-
 /**
  * 示例1
  * 输入: 1->2->3->4->5->NULL, k = 2
@@ -19,7 +17,7 @@ import utils.ListNode;
  * @author Alden
  */
 public class RotateList {
-    public ListNode rotateRight(ListNode head, int k) {
+    ListNode rotateRight(ListNode head, int k) {
         final ListNode res = new ListNode(0);
         res.next = head;
         ListNode current = head;
@@ -53,9 +51,9 @@ public class RotateList {
 //        int[] a = {0, 1, 2};
         int[] a = {};
         ListNode l1 = ListNode.getNodes(a);
-        ListNode.dumpNodes(l1);
+        l1.dumpNodes();
         RotateList test = new RotateList();
         ListNode l2 = test.rotateRight(l1, 0);
-        ListNode.dumpNodes(l2);
+        l2.dumpNodes();
     }
 }

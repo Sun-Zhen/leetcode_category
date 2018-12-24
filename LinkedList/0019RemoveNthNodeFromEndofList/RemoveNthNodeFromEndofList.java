@@ -1,5 +1,3 @@
-import utils.ListNode;
-
 /**
  * @author Alden
  */

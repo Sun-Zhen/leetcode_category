@@ -1,12 +1,10 @@
-import utils.ListNode;
-
 /**
  * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  *
  * @author Alden
  */
 public class MergeTwoSortedLists {
-    public utils.ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode res = new ListNode(0);
         ListNode temp = res;
         while (l1 != null || l2 != null) {
