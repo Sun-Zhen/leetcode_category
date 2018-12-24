@@ -20,6 +20,42 @@ import utils.ListNode;
  */
 public class RotateList {
     public ListNode rotateRight(ListNode head, int k) {
-        return null;
+        final ListNode res = new ListNode(0);
+        res.next = head;
+        ListNode current = head;
+        ListNode last = res;
+        int len = 0;
+        while (current != null) {
+            current = current.next;
+            last = last.next;
+            len++;
+        }
+        last.next = head;
+        if (len != 0) {
+            k %= len;
+        } else {
+            k = 0;
+        }
+        int i = 0;
+        current = head;
+        while (i < len - k) {
+            last = last.next;
+            current = current.next;
+            i++;
+        }
+        last.next = null;
+        res.next = current;
+        return res.next;
+    }
+
+    public static void main(String[] args) {
+//        int[] a = {1, 2, 3, 4, 5};
+//        int[] a = {0, 1, 2};
+        int[] a = {};
+        ListNode l1 = ListNode.getNodes(a);
+        ListNode.dumpNodes(l1);
+        RotateList test = new RotateList();
+        ListNode l2 = test.rotateRight(l1, 0);
+        ListNode.dumpNodes(l2);
     }
 }

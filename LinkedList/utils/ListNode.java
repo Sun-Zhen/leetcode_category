@@ -1,5 +1,3 @@
-package utils;
-
 /**
  * @author Alden
  */
@@ -12,14 +10,18 @@ public class ListNode {
     }
 
     public static ListNode getNodes(int[] a) {
-        ListNode[] l1 = new ListNode[a.length];
-        for (int i = 0; i < a.length; i++) {
-            l1[i] = new ListNode(a[i]);
-            if (i > 0) {
-                l1[i - 1].next = l1[i];
+        if (a != null && a.length > 0) {
+            ListNode[] l1 = new ListNode[a.length];
+            for (int i = 0; i < a.length; i++) {
+                l1[i] = new ListNode(a[i]);
+                if (i > 0) {
+                    l1[i - 1].next = l1[i];
+                }
             }
+            return l1[0];
+        } else {
+            return null;
         }
-        return l1[0];
     }
 
     public static void dumpNodes(ListNode l) {
